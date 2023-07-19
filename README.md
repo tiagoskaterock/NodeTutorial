@@ -4,4 +4,4 @@
 
 [NodeJS Tutorial and Projects Course](https://www.udemy.com/course/nodejs-tutorial-and-projects-course/)
 
-![NodeJs](./1.jpg)
+![NodeJs](img/1.jpg)
