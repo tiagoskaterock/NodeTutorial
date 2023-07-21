@@ -1,28 +1,12 @@
-const { readFile, writeFile } = require('fs')
+const http = require('http')
 
-readFile('./content/first.txt', 'utf8', (err, result) => {
-    if(err) {
-        console.log(err)
-        return 
-    }
-    const first = result
+const port = 5000
 
-	readFile('./content/second.txt', 'utf8', (err, result) => {
-		if(err) {
-			console.log(err)
-			return 
-		}
-		const second = result
-		writeFile(
-			'./content/result-async.txt',
-			'Here is the result: ' + first + ', ' + second,
-			(err, result) => {
-				if(err) {
-					console.log(err)
-					return
-				}
-				console.log(result)
-			}
-		)
-	})
+const webpage = '<h1>Welcome to my Homepage</h1><p>This is my first page using NodeJS</p>';
+
+const server = http.createServer((req, res) => {
+	res.write(webpage)
+	res.end()
 })
+
+server.listen(port)
