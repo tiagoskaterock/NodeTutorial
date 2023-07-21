@@ -4,7 +4,8 @@
   "description": "NodeJS Exercises",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node app.js"    
   },
   "keywords": [],
   "author": "James Cupcakes",
@@ -12,5 +13,8 @@
   "dependencies": {
     "bootstrap": "^5.3.0",
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
